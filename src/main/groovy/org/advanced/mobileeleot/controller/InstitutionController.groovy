@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
+
 /**
  * Created with IntelliJ IDEA.
  * User: wsantasiero
@@ -17,6 +18,10 @@ class InstitutionController {
 
     @RequestMapping("/")
     def @ResponseBody index() {
-        return new Greeting(2,"This is a test");
+        List<Greeting> greetings = new ArrayList();
+        greetings.add(new Greeting(1,"One"))
+        greetings.add(new Greeting(2,"Two"))
+        greetings.add(new Greeting(3,"Three"))
+        return greetings;
     }
 }

@@ -1,3 +1,5 @@
+apply from: 'dependencies.gradle'
+apply plugin: 'spring-boot'
 task wrapper(type: Wrapper) {
     gradleVersion = '1.11'
 }
